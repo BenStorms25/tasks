@@ -5,12 +5,8 @@ import { Button } from "react-bootstrap";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header
-                aria-label="heading"
-                style={{ background: "red" }}
-                className="App-header"
-            >
-                COS420 with React Hooks and TypeScript with Ben
+            <header className="App-header">
+                COS420 with React Hooks and TypeScript
             </header>
             <h2>This is a smaller header</h2>
             <img
