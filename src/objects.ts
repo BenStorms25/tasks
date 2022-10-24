@@ -13,8 +13,8 @@ export function makeBlankQuestion(
     return {
         id: id,
         name: name,
-        type: type,
         body: "",
+        type: type,
         options: [],
         expected: "",
         points: 1,
