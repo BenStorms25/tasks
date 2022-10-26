@@ -10,15 +10,15 @@ import { disposeEmitNodes } from "typescript";
  */
 export function d6(): number {
     return 1 + Math.floor(Math.random() * 6);
-} 
+}
 
 export function TwoDice(): JSX.Element {
     const [dieLeft, setDieLeft] = useState<number>(d6());
     const [dieRight, setDieRight] = useState<number>(d6());
 
-    while (dieLeft == dieRight) {
-        setDieLeft(d6());
-    }
+    // while (dieLeft == dieRight) {
+    //     setDieLeft(d6());
+    // }
 
     function rollLeft(): void {
         setDieLeft(d6());

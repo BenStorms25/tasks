@@ -171,28 +171,28 @@ export function injectPositive(values: number[]): number[] {
     let sum = values.reduce((accumulator, value) => {
         return accumulator + value;
     }, 0);
-    //let newArray: number[] = [];
+    let newArray: number[] = [];
     let foundNegative = false;
-    // for (let i = 0; i < values.length; i++) {
-    //     newArray.push(values[i]);
-    //     if (!foundNegative && values[i] < 0) {
-    //         foundNegative = true;
-    //         newArray.push(sum);
-    //     }
-    // }
-    const newArray = values.map((value) => {
-        if (foundNegative) {
-            values.push(sum);
-            foundNegative = false;
-        }
-
-        if (value < 0) {
+    for (let i = 0; i < values.length; i++) {
+        newArray.push(values[i]);
+        if (!foundNegative && values[i] < 0) {
             foundNegative = true;
-            return value;
-        } else {
-            return value;
+            newArray.push(sum);
         }
-    });
-    console.log(newArray);
+    }
+    // const newArray = values.map((value) => {
+    //     if (foundNegative) {
+    //         values.push(sum);
+    //         foundNegative = false;
+    //     }
+
+    //     if (value < 0) {
+    //         foundNegative = true;
+    //         return value;
+    //     } else {
+    //         return value;
+    //     }
+    // });
+    console.log(newArray); 
     return newArray;
 }
