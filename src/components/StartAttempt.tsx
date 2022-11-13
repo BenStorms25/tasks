@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function StartAttempt(): JSX.Element {
-    let [attempts, setAttempts] = useState<number>(4);
+    const [attempts, setAttempts] = useState<number>(4);
     const [inProgress, setInProgress] = useState<boolean>(false);
 
     function startQuiz(): void {
