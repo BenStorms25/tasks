@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-import "./ChangeColor.css";
 
 export function ChangeColor(): JSX.Element {
     const [chosenColor, setChosenColor] = useState<string>("red");
@@ -22,6 +21,7 @@ export function ChangeColor(): JSX.Element {
                     label="red"
                     value="red"
                     checked={chosenColor === "red"}
+                    style={{ backgroundColor: "red" }}
                 />
                 <Form.Check
                     inline
@@ -32,6 +32,7 @@ export function ChangeColor(): JSX.Element {
                     label="white"
                     value="white"
                     checked={chosenColor === "white"}
+                    style={{ backgroundColor: "white" }}
                 />
                 <Form.Check
                     inline
@@ -42,6 +43,7 @@ export function ChangeColor(): JSX.Element {
                     label="magenta"
                     value="magenta"
                     checked={chosenColor === "magenta"}
+                    style={{ backgroundColor: "magenta" }}
                 />
                 <Form.Check
                     inline
@@ -52,6 +54,7 @@ export function ChangeColor(): JSX.Element {
                     label="cyan"
                     value="cyan"
                     checked={chosenColor === "cyan"}
+                    style={{ backgroundColor: "cyan" }}
                 />
                 <Form.Check
                     inline
@@ -62,6 +65,7 @@ export function ChangeColor(): JSX.Element {
                     label="purple"
                     value="purple"
                     checked={chosenColor === "purple"}
+                    style={{ backgroundColor: "purple" }}
                 />
                 <Form.Check
                     inline
@@ -72,6 +76,7 @@ export function ChangeColor(): JSX.Element {
                     label="orange"
                     value="orange"
                     checked={chosenColor === "orange"}
+                    style={{ backgroundColor: "orange" }}
                 />
                 <Form.Check
                     inline
@@ -82,6 +87,7 @@ export function ChangeColor(): JSX.Element {
                     label="green"
                     value="green"
                     checked={chosenColor === "green"}
+                    style={{ backgroundColor: "green" }}
                 />
                 <Form.Check
                     inline
@@ -92,9 +98,13 @@ export function ChangeColor(): JSX.Element {
                     label="blue"
                     value="blue"
                     checked={chosenColor === "blue"}
+                    style={{ backgroundColor: "blue" }}
                 />
             </Form.Group>
-            <div data-testid="colored-box" id={chosenColor}>
+            <div
+                data-testid="colored-box"
+                style={{ backgroundColor: chosenColor }}
+            >
                 <p>You have chosen</p>
                 <span>{chosenColor}</span>
             </div>
